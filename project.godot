@@ -1,0 +1,45 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+[application]
+
+config/name="Astropos"
+run/main_scene="res://scenes/menus/main_menu.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+BgmThunderstorm="*res://scenes/moods/bgm_thunderstorm.tscn"
+Global="*res://global.gd"
+Plant="*res://shared/plant.gd"
+
+[display]
+
+window/size/width=1366
+window/size/height=768
+window/size/resizable=false
+window/stretch/mode="2d"
+window/stretch/aspect="expand"
+
+[global]
+
+max_remote_stdout_chars_per_second=false
+
+[network]
+
+limits/debugger_stdout/max_chars_per_second=4096
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

@@ -1,0 +1,531 @@
+[gd_scene load_steps=41 format=2]
+
+[ext_resource path="res://assets/tiles/budding-feeded.png" type="Texture" id=1]
+[ext_resource path="res://assets/tiles/seeded.png" type="Texture" id=2]
+[ext_resource path="res://assets/tiles/dry.png" type="Texture" id=3]
+[ext_resource path="res://assets/tiles/seeded-watered.png" type="Texture" id=4]
+[ext_resource path="res://assets/tiles/ripening.png" type="Texture" id=5]
+[ext_resource path="res://assets/tiles/budding.png" type="Texture" id=6]
+[ext_resource path="res://assets/tiles/seedling-feeded.png" type="Texture" id=7]
+[ext_resource path="res://assets/textures/shadow.png" type="Texture" id=8]
+[ext_resource path="res://assets/tiles/seedling.png" type="Texture" id=9]
+[ext_resource path="res://assets/tiles/seedling-watered.png" type="Texture" id=10]
+[ext_resource path="res://assets/tiles/budding-watered.png" type="Texture" id=11]
+[ext_resource path="res://assets/textures/frame-big.png" type="Texture" id=12]
+[ext_resource path="res://assets/tiles/flowering-feeded.png" type="Texture" id=13]
+[ext_resource path="res://assets/tiles/seeded-feeded.png" type="Texture" id=14]
+[ext_resource path="res://assets/tiles/flowering-watered.png" type="Texture" id=15]
+[ext_resource path="res://assets/tiles/flowering.png" type="Texture" id=16]
+[ext_resource path="res://assets/textures/frame-long.png" type="Texture" id=17]
+[ext_resource path="res://scenes/terminal/terminal_history.gd" type="Script" id=18]
+[ext_resource path="res://assets/textures/frame.png" type="Texture" id=19]
+[ext_resource path="res://scenes/fields/animations/floating.gd" type="Script" id=20]
+[ext_resource path="res://scenes/fields/animations/shadow.gd" type="Script" id=21]
+[ext_resource path="res://scenes/main.gd" type="Script" id=22]
+[ext_resource path="res://scenes/moods/Rain.tscn" type="PackedScene" id=23]
+
+[sub_resource type="TileSet" id=14]
+0/name = "shadow.png 0"
+0/texture = ExtResource( 8 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 48 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="OccluderPolygon2D" id=15]
+polygon = PoolVector2Array( 0, 24, 16, 32, 16, 48, 0, 40 )
+
+[sub_resource type="TileSet" id=1]
+0/name = "dry.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 48 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/occluder = SubResource( 15 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "seeded.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 32, 48 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "seeded-watered.png 2"
+2/texture = ExtResource( 4 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 32, 48 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "seeded-feeded.png 3"
+3/texture = ExtResource( 14 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 32, 48 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "seedling.png 4"
+4/texture = ExtResource( 9 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 32, 48 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "seedling-watered.png 5"
+5/texture = ExtResource( 10 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 0, 32, 48 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "seedling-feeded.png 6"
+6/texture = ExtResource( 7 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 0, 32, 48 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "budding.png 7"
+7/texture = ExtResource( 6 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 0, 32, 48 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "budding-watered.png 8"
+8/texture = ExtResource( 11 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 0, 32, 48 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "budding-feeded.png 9"
+9/texture = ExtResource( 1 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 0, 0, 32, 48 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "flowering.png 10"
+10/texture = ExtResource( 16 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 0, 0, 32, 48 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "flowering-watered.png 11"
+11/texture = ExtResource( 15 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 0, 0, 32, 48 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "flowering-feeded.png 12"
+12/texture = ExtResource( 13 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 0, 0, 32, 48 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+13/name = "ripening.png 13"
+13/texture = ExtResource( 5 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 0, 0, 32, 48 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+
+[sub_resource type="DynamicFontData" id=10]
+font_path = "res://assets/fonts/charybdis.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 21
+font_data = SubResource( 10 )
+
+[sub_resource type="DynamicFontData" id=13]
+font_path = "res://assets/fonts/charybdis.ttf"
+
+[sub_resource type="DynamicFont" id=7]
+size = 22
+font_data = SubResource( 13 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://assets/fonts/charybdis.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 22
+font_data = SubResource( 3 )
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="DynamicFontData" id=11]
+font_path = "res://assets/fonts/charybdis.ttf"
+
+[sub_resource type="DynamicFont" id=12]
+size = 26
+font_data = SubResource( 11 )
+
+[sub_resource type="DynamicFontData" id=16]
+font_path = "res://assets/fonts/charybdis.ttf"
+
+[sub_resource type="DynamicFont" id=17]
+size = 24
+font_data = SubResource( 16 )
+
+[sub_resource type="DynamicFontData" id=18]
+font_path = "res://assets/fonts/charybdis.ttf"
+
+[sub_resource type="DynamicFont" id=19]
+size = 20
+font_data = SubResource( 18 )
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 22 )
+
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 1366.0
+margin_bottom = 768.0
+color = Color( 0.113725, 0.129412, 0.168627, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Shadow" type="TileMap" parent="."]
+position = Vector2( 1050, 220 )
+scale = Vector2( 3, 3 )
+mode = 1
+tile_set = SubResource( 14 )
+cell_size = Vector2( 32, 16 )
+format = 1
+tile_data = PoolIntArray( 131077, 0, 0, 196613, 0, 0, 262149, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0 )
+script = ExtResource( 21 )
+
+[node name="Farm" type="TileMap" parent="."]
+position = Vector2( 1054, 300 )
+scale = Vector2( 3, 3 )
+mode = 1
+tile_set = SubResource( 1 )
+cell_size = Vector2( 32, 16 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0 )
+script = ExtResource( 20 )
+
+[node name="Rain" parent="." instance=ExtResource( 23 )]
+visible = false
+
+[node name="Terminal" type="Control" parent="."]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 551.0
+margin_bottom = 772.0
+rect_scale = Vector2( 0.99, 0.99 )
+
+[node name="Background" type="ColorRect" parent="Terminal"]
+margin_left = -4.0
+margin_top = -4.0
+margin_right = 552.0
+margin_bottom = 772.0
+color = Color( 0.0588235, 0.0666667, 0.0941176, 1 )
+
+[node name="Wrapper" type="Control" parent="Terminal"]
+margin_left = -4.0
+margin_top = -4.0
+margin_right = 537.0
+margin_bottom = 749.0
+rect_scale = Vector2( 1.03, 1.03 )
+
+[node name="FrameOutput" type="Sprite" parent="Terminal/Wrapper"]
+position = Vector2( 270.252, 347.202 )
+scale = Vector2( 0.95, 0.95 )
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TerminalHistory" type="TextEdit" parent="Terminal/Wrapper/FrameOutput"]
+margin_left = -254.0
+margin_top = -340.0
+margin_right = 254.0
+margin_bottom = 393.0
+focus_mode = 0
+mouse_default_cursor_shape = 0
+input_pass_on_modal_close_click = false
+custom_colors/background_color = Color( 0.0588235, 0.0666667, 0.0941176, 1 )
+custom_fonts/font = SubResource( 2 )
+readonly = true
+syntax_highlighting = true
+wrap_enabled = true
+caret_moving_by_right_click = false
+script = ExtResource( 18 )
+
+[node name="FrameInput" type="Sprite" parent="Terminal/Wrapper"]
+position = Vector2( 270.252, 706.117 )
+scale = Vector2( 0.95, 0.978609 )
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Terminal/Wrapper/FrameInput"]
+anchor_left = -0.015
+anchor_top = -18.0
+anchor_right = -0.015
+anchor_bottom = -18.0
+margin_left = -243.96
+margin_top = 1140.0
+margin_right = -143.96
+margin_bottom = 1163.0
+custom_fonts/font = SubResource( 7 )
+text = "astropos $"
+
+[node name="TerminalInput" type="LineEdit" parent="Terminal/Wrapper/FrameInput"]
+anchor_left = -0.015
+anchor_top = -18.0
+anchor_right = -0.015
+anchor_bottom = -18.0
+margin_left = -135.96
+margin_top = 1132.0
+margin_right = 260.04
+margin_bottom = 1172.0
+focus_mode = 1
+custom_fonts/font = SubResource( 4 )
+custom_styles/focus = SubResource( 9 )
+custom_styles/normal = SubResource( 8 )
+max_length = 40
+caret_blink = true
+
+[node name="GUI" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="FrameCounter" type="Sprite" parent="GUI"]
+position = Vector2( 1328, 704 )
+texture = ExtResource( 19 )
+offset = Vector2( -16, 8 )
+
+[node name="HarvestCount" type="Label" parent="GUI/FrameCounter"]
+margin_left = -48.0
+margin_top = -24.0
+margin_right = 16.0
+margin_bottom = 36.0
+custom_fonts/font = SubResource( 12 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="Frame2" type="Sprite" parent="GUI"]
+visible = false
+position = Vector2( 1240, 704 )
+texture = ExtResource( 19 )
+offset = Vector2( -16, 8 )
+
+[node name="Frame3" type="Sprite" parent="GUI"]
+visible = false
+position = Vector2( 1168, 704 )
+texture = ExtResource( 19 )
+offset = Vector2( -16, 8 )
+
+[node name="Frame4" type="Sprite" parent="GUI"]
+visible = false
+position = Vector2( 1096, 704 )
+texture = ExtResource( 19 )
+offset = Vector2( -16, 8 )
+
+[node name="Frame5" type="Sprite" parent="GUI"]
+visible = false
+position = Vector2( 1024, 704 )
+texture = ExtResource( 19 )
+offset = Vector2( -16, 8 )
+
+[node name="CoordHelper" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="a" type="Label" parent="CoordHelper"]
+margin_left = 1012.0
+margin_top = 328.0
+margin_right = 1023.0
+margin_bottom = 353.0
+custom_fonts/font = SubResource( 17 )
+text = "a"
+align = 1
+
+[node name="b" type="Label" parent="CoordHelper"]
+margin_left = 964.0
+margin_top = 352.0
+margin_right = 975.0
+margin_bottom = 377.0
+custom_fonts/font = SubResource( 17 )
+text = "b"
+align = 1
+
+[node name="c" type="Label" parent="CoordHelper"]
+margin_left = 916.0
+margin_top = 376.0
+margin_right = 927.0
+margin_bottom = 401.0
+custom_fonts/font = SubResource( 17 )
+text = "c"
+align = 1
+
+[node name="d" type="Label" parent="CoordHelper"]
+margin_left = 868.0
+margin_top = 400.0
+margin_right = 879.0
+margin_bottom = 425.0
+custom_fonts/font = SubResource( 17 )
+text = "d"
+align = 1
+
+[node name="1" type="Label" parent="CoordHelper"]
+margin_left = 1076.0
+margin_top = 332.0
+margin_right = 1085.0
+margin_bottom = 352.0
+custom_fonts/font = SubResource( 19 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="2" type="Label" parent="CoordHelper"]
+margin_left = 1124.0
+margin_top = 356.0
+margin_right = 1133.0
+margin_bottom = 376.0
+custom_fonts/font = SubResource( 19 )
+text = "2"
+align = 1
+valign = 1
+
+[node name="3" type="Label" parent="CoordHelper"]
+margin_left = 1172.0
+margin_top = 380.0
+margin_right = 1181.0
+margin_bottom = 400.0
+custom_fonts/font = SubResource( 19 )
+text = "3"
+align = 1
+valign = 1
+
+[node name="4" type="Label" parent="CoordHelper"]
+margin_left = 1220.0
+margin_top = 404.0
+margin_right = 1229.0
+margin_bottom = 424.0
+custom_fonts/font = SubResource( 19 )
+text = "4"
+align = 1
+valign = 1
+
+[connection signal="text_changed" from="Terminal/Wrapper/FrameOutput/TerminalHistory" to="Terminal/Wrapper/FrameOutput/TerminalHistory" method="_on_TerminalHistory_text_changed"]
+[connection signal="text_entered" from="Terminal/Wrapper/FrameInput/TerminalInput" to="Farm" method="_on_TerminalInput_text_entered"]

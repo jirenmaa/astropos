@@ -1,0 +1,644 @@
+[gd_scene load_steps=62 format=2]
+
+[ext_resource path="res://assets/tiles/budding-feeded.png" type="Texture" id=1]
+[ext_resource path="res://assets/tiles/seeded.png" type="Texture" id=2]
+[ext_resource path="res://assets/tiles/dry.png" type="Texture" id=3]
+[ext_resource path="res://assets/tiles/seeded-watered.png" type="Texture" id=4]
+[ext_resource path="res://assets/tiles/ripening.png" type="Texture" id=5]
+[ext_resource path="res://assets/tiles/budding.png" type="Texture" id=6]
+[ext_resource path="res://assets/tiles/seedling-feeded.png" type="Texture" id=7]
+[ext_resource path="res://assets/textures/shadow.png" type="Texture" id=8]
+[ext_resource path="res://assets/tiles/seedling.png" type="Texture" id=9]
+[ext_resource path="res://assets/tiles/seedling-watered.png" type="Texture" id=10]
+[ext_resource path="res://assets/tiles/budding-watered.png" type="Texture" id=11]
+[ext_resource path="res://assets/textures/frame-big.png" type="Texture" id=12]
+[ext_resource path="res://assets/tiles/flowering-feeded.png" type="Texture" id=13]
+[ext_resource path="res://assets/tiles/seeded-feeded.png" type="Texture" id=14]
+[ext_resource path="res://assets/tiles/flowering-watered.png" type="Texture" id=15]
+[ext_resource path="res://assets/tiles/flowering.png" type="Texture" id=16]
+[ext_resource path="res://assets/textures/frame-long.png" type="Texture" id=17]
+[ext_resource path="res://scenes/fields/animations/shadow.gd" type="Script" id=18]
+[ext_resource path="res://scenes/menus/buttons/button_change_resolution.gd" type="Script" id=19]
+[ext_resource path="res://scenes/menus/panels/scroll_container.gd" type="Script" id=20]
+[ext_resource path="res://scenes/menus/splash_subtitle.gd" type="Script" id=21]
+[ext_resource path="res://scenes/moods/Rain.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scenes/menus/panels/panel_settings.gd" type="Script" id=23]
+[ext_resource path="res://assets/textures/frame-delete.png" type="Texture" id=24]
+[ext_resource path="res://assets/textures/frame-medium.png" type="Texture" id=25]
+[ext_resource path="res://scenes/menus/panels/panel_load_game.gd" type="Script" id=26]
+[ext_resource path="res://scenes/menus/main_menu.gd" type="Script" id=27]
+[ext_resource path="res://scenes/menus/buttons/buttons.gd" type="Script" id=28]
+[ext_resource path="res://scenes/menus/animations/fields_showcase.gd" type="Script" id=29]
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://assets/fonts/charybdis.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 100
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFontData" id=5]
+hinting = 1
+font_path = "res://assets/fonts/charybdis.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 24
+font_data = SubResource( 5 )
+
+[sub_resource type="DynamicFontData" id=41]
+font_path = "res://assets/fonts/charybdis.ttf"
+
+[sub_resource type="DynamicFont" id=42]
+size = 24
+font_data = SubResource( 41 )
+
+[sub_resource type="StyleBoxTexture" id=43]
+texture = ExtResource( 17 )
+region_rect = Rect2( 0, 0, 536, 64 )
+modulate_color = Color( 0.0352941, 0.94902, 0.905882, 1 )
+
+[sub_resource type="StyleBoxTexture" id=44]
+texture = ExtResource( 17 )
+region_rect = Rect2( 0, 0, 536, 64 )
+modulate_color = Color( 0.0352941, 0.94902, 0.905882, 1 )
+
+[sub_resource type="StyleBoxTexture" id=45]
+texture = ExtResource( 17 )
+region_rect = Rect2( 0, 0, 536, 64 )
+
+[sub_resource type="TileSet" id=16]
+0/name = "shadow.png 0"
+0/texture = ExtResource( 8 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 48 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="OccluderPolygon2D" id=15]
+polygon = PoolVector2Array( 0, 24, 16, 32, 16, 48, 0, 40 )
+
+[sub_resource type="TileSet" id=17]
+0/name = "dry.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 48 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/occluder = SubResource( 15 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "seeded.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 32, 48 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "seeded-watered.png 2"
+2/texture = ExtResource( 4 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 32, 48 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "seeded-feeded.png 3"
+3/texture = ExtResource( 14 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 32, 48 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "seedling.png 4"
+4/texture = ExtResource( 9 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 32, 48 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "seedling-watered.png 5"
+5/texture = ExtResource( 10 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 0, 32, 48 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "seedling-feeded.png 6"
+6/texture = ExtResource( 7 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 0, 32, 48 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "budding.png 7"
+7/texture = ExtResource( 6 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 0, 32, 48 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "budding-watered.png 8"
+8/texture = ExtResource( 11 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 0, 32, 48 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "budding-feeded.png 9"
+9/texture = ExtResource( 1 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 0, 0, 32, 48 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "flowering.png 10"
+10/texture = ExtResource( 16 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 0, 0, 32, 48 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "flowering-watered.png 11"
+11/texture = ExtResource( 15 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 0, 0, 32, 48 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "flowering-feeded.png 12"
+12/texture = ExtResource( 13 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 0, 0, 32, 48 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+13/name = "ripening.png 13"
+13/texture = ExtResource( 5 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 0, 0, 32, 48 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+
+[sub_resource type="StyleBoxTexture" id=28]
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 536, 698 )
+
+[sub_resource type="DynamicFontData" id=49]
+font_path = "res://assets/fonts/charybdis.ttf"
+
+[sub_resource type="DynamicFont" id=50]
+size = 24
+font_data = SubResource( 49 )
+
+[sub_resource type="StyleBoxTexture" id=51]
+texture = ExtResource( 17 )
+region_rect = Rect2( 0, 0, 536, 64 )
+modulate_color = Color( 0.0352941, 0.94902, 0.905882, 1 )
+
+[sub_resource type="StyleBoxTexture" id=52]
+texture = ExtResource( 17 )
+region_rect = Rect2( 0, 0, 536, 64 )
+modulate_color = Color( 0.0352941, 0.94902, 0.905882, 1 )
+
+[sub_resource type="StyleBoxTexture" id=53]
+texture = ExtResource( 17 )
+region_rect = Rect2( 0, 0, 536, 64 )
+modulate_color = Color( 0.0352941, 0.94902, 0.905882, 1 )
+
+[sub_resource type="StyleBoxTexture" id=54]
+texture = ExtResource( 17 )
+region_rect = Rect2( 0, 0, 536, 64 )
+
+[sub_resource type="StyleBoxTexture" id=55]
+texture = ExtResource( 24 )
+region_rect = Rect2( 0, 0, 64, 64 )
+modulate_color = Color( 0.968627, 0.243137, 0.243137, 1 )
+
+[sub_resource type="StyleBoxTexture" id=56]
+texture = ExtResource( 24 )
+region_rect = Rect2( 0, 0, 64, 64 )
+modulate_color = Color( 0.968627, 0.243137, 0.243137, 1 )
+
+[sub_resource type="StyleBoxTexture" id=57]
+texture = ExtResource( 24 )
+region_rect = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="DynamicFontData" id=31]
+font_path = "res://assets/fonts/charybdis.ttf"
+
+[sub_resource type="DynamicFont" id=32]
+size = 20
+font_data = SubResource( 31 )
+
+[sub_resource type="DynamicFontData" id=18]
+font_path = "res://assets/fonts/charybdis.ttf"
+
+[sub_resource type="DynamicFont" id=19]
+size = 24
+font_data = SubResource( 18 )
+
+[sub_resource type="StyleBoxTexture" id=21]
+texture = ExtResource( 25 )
+region_rect = Rect2( 0, 0, 264, 48 )
+modulate_color = Color( 0.0352941, 0.94902, 0.905882, 1 )
+
+[sub_resource type="StyleBoxTexture" id=22]
+texture = ExtResource( 25 )
+region_rect = Rect2( 0, 0, 264, 48 )
+modulate_color = Color( 0.0352941, 0.94902, 0.905882, 1 )
+
+[sub_resource type="StyleBoxTexture" id=29]
+texture = ExtResource( 25 )
+region_rect = Rect2( 0, 0, 264, 48 )
+modulate_color = Color( 0.0352941, 0.94902, 0.905882, 1 )
+
+[sub_resource type="StyleBoxTexture" id=20]
+texture = ExtResource( 25 )
+region_rect = Rect2( 0, 0, 264, 48 )
+
+[sub_resource type="DynamicFontData" id=33]
+font_path = "res://assets/fonts/charybdis.ttf"
+
+[sub_resource type="DynamicFont" id=34]
+size = 17
+font_data = SubResource( 33 )
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource( 27 )
+
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 1366.0
+margin_bottom = 768.0
+color = Color( 0.113725, 0.129412, 0.168627, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Title" type="Label" parent="."]
+margin_left = 840.0
+margin_top = 112.0
+margin_right = 1192.0
+margin_bottom = 212.0
+custom_fonts/font = SubResource( 4 )
+text = "ASTROPOS"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="SplashSubtitle" type="Label" parent="Title"]
+margin_top = 96.0
+margin_right = 376.0
+margin_bottom = 159.0
+custom_fonts/font = SubResource( 6 )
+text = "The farm was a source of food and livelihood."
+valign = 1
+autowrap = true
+script = ExtResource( 21 )
+
+[node name="ControlButtons" type="Control" parent="."]
+margin_left = 768.0
+margin_top = -16.0
+margin_right = 808.0
+margin_bottom = 24.0
+
+[node name="NewGame" type="Button" parent="ControlButtons"]
+margin_left = 72.0
+margin_top = 440.0
+margin_right = 504.0
+margin_bottom = 496.0
+mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 42 )
+custom_styles/hover = SubResource( 43 )
+custom_styles/pressed = SubResource( 44 )
+custom_styles/normal = SubResource( 45 )
+text = "NEW GAME"
+script = ExtResource( 28 )
+
+[node name="LoadGame" type="Button" parent="ControlButtons"]
+margin_left = 72.0
+margin_top = 512.0
+margin_right = 504.0
+margin_bottom = 568.0
+mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 42 )
+custom_styles/hover = SubResource( 43 )
+custom_styles/pressed = SubResource( 44 )
+custom_styles/normal = SubResource( 45 )
+text = "LOAD GAME"
+script = ExtResource( 28 )
+
+[node name="Settings" type="Button" parent="ControlButtons"]
+margin_left = 72.0
+margin_top = 584.0
+margin_right = 504.0
+margin_bottom = 640.0
+mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 42 )
+custom_styles/hover = SubResource( 43 )
+custom_styles/pressed = SubResource( 44 )
+custom_styles/normal = SubResource( 45 )
+text = "SETTINGS"
+script = ExtResource( 28 )
+
+[node name="ExitGame" type="Button" parent="ControlButtons"]
+margin_left = 72.0
+margin_top = 656.0
+margin_right = 504.0
+margin_bottom = 712.0
+mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 42 )
+custom_styles/hover = SubResource( 43 )
+custom_styles/pressed = SubResource( 44 )
+custom_styles/normal = SubResource( 45 )
+text = "EXIT GAME"
+script = ExtResource( 28 )
+
+[node name="Shadow" type="TileMap" parent="."]
+position = Vector2( 320, 288 )
+scale = Vector2( 3, 3 )
+mode = 1
+tile_set = SubResource( 16 )
+cell_size = Vector2( 32, 16 )
+format = 1
+tile_data = PoolIntArray( 131077, 0, 0, 196613, 0, 0, 262149, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0 )
+script = ExtResource( 18 )
+
+[node name="FarmShowcase" type="TileMap" parent="."]
+position = Vector2( 320, 368 )
+scale = Vector2( 3, 3 )
+mode = 1
+tile_set = SubResource( 17 )
+cell_size = Vector2( 32, 16 )
+format = 1
+tile_data = PoolIntArray( 0, 3, 0, 1, 7, 0, 2, 3, 0, 3, 3, 0, 65536, 4, 0, 65537, 6, 0, 65538, 5, 0, 65539, 5, 0, 131072, 8, 0, 131073, 9, 0, 131074, 10, 0, 131075, 7, 0, 196608, 13, 0, 196609, 13, 0, 196610, 4, 0, 196611, 2, 0 )
+script = ExtResource( 29 )
+
+[node name="PanelLoadGame" type="Control" parent="."]
+visible = false
+margin_right = 1368.0
+margin_bottom = 768.0
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Background" type="ColorRect" parent="PanelLoadGame"]
+margin_right = 1368.0
+margin_bottom = 768.0
+color = Color( 0.0862745, 0.0980392, 0.129412, 0.819608 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Panel" type="Panel" parent="PanelLoadGame"]
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 640.0
+margin_bottom = 704.0
+custom_styles/panel = SubResource( 28 )
+
+[node name="Container" type="ScrollContainer" parent="PanelLoadGame/Panel"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 560.0
+margin_bottom = 576.0
+size_flags_horizontal = 2
+scroll_horizontal_enabled = false
+script = ExtResource( 20 )
+
+[node name="VBox" type="VBoxContainer" parent="PanelLoadGame/Panel/Container"]
+margin_right = 544.0
+size_flags_horizontal = 3
+size_flags_vertical = 2
+
+[node name="DefaultLoad" type="Button" parent="PanelLoadGame/Panel/Container/VBox"]
+visible = false
+margin_right = 544.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 0, 72 )
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 50 )
+custom_styles/hover = SubResource( 51 )
+custom_styles/pressed = SubResource( 52 )
+custom_styles/focus = SubResource( 53 )
+custom_styles/normal = SubResource( 54 )
+text = "TESTING"
+
+[node name="Delete" type="Button" parent="PanelLoadGame/Panel/Container/VBox/DefaultLoad"]
+margin_left = 484.0
+margin_top = 12.0
+margin_right = 532.0
+margin_bottom = 60.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 55 )
+custom_styles/pressed = SubResource( 56 )
+custom_styles/normal = SubResource( 57 )
+
+[node name="Helper" type="Label" parent="PanelLoadGame/Panel"]
+margin_left = 16.0
+margin_top = 600.0
+margin_right = 304.0
+margin_bottom = 620.0
+custom_fonts/font = SubResource( 32 )
+text = "Press 'esc' to close this panel"
+
+[node name="PanelSettings" type="Control" parent="."]
+visible = false
+margin_right = 1368.0
+margin_bottom = 768.0
+script = ExtResource( 23 )
+
+[node name="Background" type="ColorRect" parent="PanelSettings"]
+margin_right = 1368.0
+margin_bottom = 768.0
+color = Color( 0.0862745, 0.0980392, 0.129412, 0.819608 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Panel" type="Panel" parent="PanelSettings"]
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 640.0
+margin_bottom = 704.0
+custom_styles/panel = SubResource( 28 )
+
+[node name="TitleResolution" type="Label" parent="PanelSettings/Panel"]
+margin_left = 24.0
+margin_top = 32.0
+margin_right = 312.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 32 )
+text = "Game Resolutions"
+
+[node name="DefaultResButton" type="Button" parent="PanelSettings/Panel"]
+margin_left = 24.0
+margin_top = 72.0
+margin_right = 288.0
+margin_bottom = 120.0
+mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 19 )
+custom_styles/hover = SubResource( 21 )
+custom_styles/pressed = SubResource( 22 )
+custom_styles/focus = SubResource( 29 )
+custom_styles/normal = SubResource( 20 )
+text = "1366 x 768"
+script = ExtResource( 19 )
+
+[node name="DefaultResTip" type="Label" parent="PanelSettings/Panel"]
+margin_left = 24.0
+margin_top = 128.0
+margin_right = 360.0
+margin_bottom = 171.0
+custom_colors/font_color = Color( 0.631373, 0.631373, 0.631373, 1 )
+custom_fonts/font = SubResource( 34 )
+text = "It's better for your 1920 x 1080 monitor resolution. (default)"
+autowrap = true
+
+[node name="SmallResButton" type="Button" parent="PanelSettings/Panel"]
+margin_left = 24.0
+margin_top = 192.0
+margin_right = 288.0
+margin_bottom = 240.0
+mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 19 )
+custom_styles/hover = SubResource( 21 )
+custom_styles/pressed = SubResource( 22 )
+custom_styles/focus = SubResource( 29 )
+custom_styles/normal = SubResource( 20 )
+text = "1024 x 576"
+
+[node name="DefaultResTip2" type="Label" parent="PanelSettings/Panel"]
+margin_left = 24.0
+margin_top = 248.0
+margin_right = 344.0
+margin_bottom = 291.0
+custom_colors/font_color = Color( 0.631373, 0.631373, 0.631373, 1 )
+custom_fonts/font = SubResource( 34 )
+text = "It's better for your 1366 x 768 monitor resolution."
+autowrap = true
+
+[node name="Helper" type="Label" parent="PanelSettings/Panel"]
+margin_left = 16.0
+margin_top = 600.0
+margin_right = 304.0
+margin_bottom = 620.0
+custom_fonts/font = SubResource( 32 )
+text = "Press 'esc' to close this panel"
+
+[node name="Rain" parent="." instance=ExtResource( 22 )]
+visible = false
+
+[connection signal="pressed" from="ControlButtons/NewGame" to="ControlButtons/NewGame" method="_on_NewGame_pressed"]
+[connection signal="pressed" from="ControlButtons/LoadGame" to="ControlButtons/LoadGame" method="_on_LoadGame_pressed"]
+[connection signal="pressed" from="ControlButtons/Settings" to="ControlButtons/Settings" method="_on_Settings_pressed"]
+[connection signal="pressed" from="ControlButtons/ExitGame" to="ControlButtons/ExitGame" method="_on_ExitGame_pressed"]
+[connection signal="pressed" from="PanelSettings/Panel/DefaultResButton" to="PanelSettings/Panel/DefaultResButton" method="_on_DefaultResButton_pressed"]
+[connection signal="pressed" from="PanelSettings/Panel/SmallResButton" to="PanelSettings/Panel/DefaultResButton" method="_on_SmallResButton_pressed"]
