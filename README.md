@@ -3,7 +3,7 @@
 
 A simple command based farm simulator, this project is based on games called *Maelstorm.exe* in [itch.io/maelstorm.exe](https://wintrmut3.itch.io/maelstromexe) by *wintrmut3*
 
-*astorpos* : https://tinyurl.com/47mafubn
+*you can download it here free* : https://tinyurl.com/47mafubn
 
 ## Demo
 
